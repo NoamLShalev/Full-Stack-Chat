@@ -8,7 +8,7 @@ let upload = multer({
 });
 let app = express();
 app.use(cookieParser());
-app.use(cors({ credentials: true, origin: "http://localhost:3000" }));
+app.use(cors({ credentials: true, origin: "http://138.197.131.216:3000" }));
 app.use("/images", express.static(__dirname + "/uploads/"));
 
 messages = [];
