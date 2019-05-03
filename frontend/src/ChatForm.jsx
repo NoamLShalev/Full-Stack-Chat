@@ -6,7 +6,7 @@ class UnconnectedChatForm extends Component {
     super(props);
     this.state = {
       message: "",
-      file: ""
+      file: undefined
     };
   }
 
@@ -43,7 +43,7 @@ class UnconnectedChatForm extends Component {
       body: data,
       credentials: "include"
     });
-    event.target.reset();
+    this.setState({ message: "", file: undefined });
   };
 
   logout = () => {
@@ -98,8 +98,16 @@ class UnconnectedChatForm extends Component {
       return (
         <div>
           <form onSubmit={this.handleSubmit}>
-            <input type="text" onChange={this.handleMessageChange} />
-            <input type="file" onChange={this.handleFiles} />
+            <input
+              type="text"
+              onChange={this.handleMessageChange}
+              value={this.state.message}
+            />
+            <input
+              type="file"
+              onChange={this.handleFiles}
+              value={this.state.file}
+            />
             <input type="submit" value="Send" />
           </form>
           <button onClick={this.logout}>Logout</button>
@@ -111,8 +119,16 @@ class UnconnectedChatForm extends Component {
     return (
       <div>
         <form onSubmit={this.handleSubmit}>
-          <input type="text" onChange={this.handleMessageChange} />
-          <input type="file" onChange={this.handleFiles} />
+          <input
+            type="text"
+            onChange={this.handleMessageChange}
+            value={this.state.message}
+          />
+          <input
+            type="file"
+            onChange={this.handleFiles}
+            value={this.state.file}
+          />
           <input type="submit" value="Send" />
         </form>
         <button onClick={this.logout}>Logout</button>

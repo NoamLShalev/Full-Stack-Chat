@@ -11,11 +11,9 @@ class UnconnectedApp extends Component {
       credentials: "include"
     })
       .then(responseHeader => {
-        console.log("im here");
         return responseHeader.text();
       })
       .then(responseBody => {
-        console.log("now im here", responseBody);
         let parsed = JSON.parse(responseBody);
         if (parsed.success) {
           this.props.dispatch({ type: "login-success" });
