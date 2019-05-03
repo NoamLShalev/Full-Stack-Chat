@@ -7,7 +7,7 @@ import ChatForm from "./ChatForm.jsx";
 
 class UnconnectedApp extends Component {
   componentDidMount = () => {
-    fetch("http://localhost:4000/login-check", {
+    fetch("http://138.197.131.216/login-check", {
       credentials: "include"
     })
       .then(responseHeader => {
