@@ -102,6 +102,7 @@ class UnconnectedChatForm extends Component {
               <textarea
                 type="text"
                 placeholder="Message"
+                value={this.state.message}
                 onChange={this.handleMessageChange}
               />
               <div>
@@ -124,6 +125,7 @@ class UnconnectedChatForm extends Component {
             <textarea
               type="text"
               placeholder="Message"
+              value={this.state.message}
               onChange={this.handleMessageChange}
             />
             <div>
