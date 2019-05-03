@@ -34,7 +34,7 @@ class UnconnectedChatMessages extends Component {
   render = () => {
     return (
       <div>
-        <ul>
+        <ul className="msg-list">
           {this.props.messages.map(object => {
             if (object.image === undefined) {
               return (

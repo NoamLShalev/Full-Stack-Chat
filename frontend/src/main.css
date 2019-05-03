@@ -1,21 +1,83 @@
 body {
-  background-color: #bbb;
-  margin: 0;
+  background-color: #faf0e1;
+  font-family: "Helvetica";
+  margin-top: 10px;
+}
+
+.list-container {
+  display: flex;
+  justify-content: center;
 }
 
 ul {
   list-style-type: none;
-  padding: 0;
+  padding: 5px;
 }
 
 .time {
-  color: white;
+  color: #f79f9f;
 }
 
 .list-container {
   display: flex;
 }
 
+.chat,
 .users {
-  margin: 0 40px;
+  border: 2px solid white;
+  border-radius: 5px;
+  margin: 20px;
+  padding: 15px;
+}
+
+.chat {
+  width: 980px;
+}
+
+.msg-list {
+  background-color: white;
+  border-radius: 5px;
+  padding: 10px;
+  overflow: scroll;
+  height: 300px;
+}
+
+h2,
+li,
+span,
+p {
+  color: grey;
+  padding: 0;
+  margin: 0;
+}
+
+.users {
+  min-width: 100px;
+}
+
+button {
+  background-color: #eec0c0;
+  border: 2px solid #f79f9f;
+  border-radius: 5px;
+  margin: 5px;
+  font-family: "Helvetica";
+  text-align: center;
+  font-weight: bold;
+  color: #939090;
+}
+
+textarea {
+  padding: 8px 12px;
+  width: 300px;
+  height: 50px;
+  margin-right: 20px;
+  border-radius: 5px;
+}
+
+.user-inputs {
+  display: flex;
+}
+
+.add-image {
+  padding-bottom: 5px;
 }

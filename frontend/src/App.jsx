@@ -30,6 +30,11 @@ class UnconnectedApp extends Component {
     if (this.props.logged) {
       return (
         <div className="list-container">
+          <div className="chat">
+            <h2>Main Chat:</h2>
+            <ChatMessages />
+            <ChatForm />
+          </div>
           <div className="users">
             <p>Active Users:</p>
             <ul>
@@ -37,10 +42,6 @@ class UnconnectedApp extends Component {
                 return <li>{user}</li>;
               })}
             </ul>
-          </div>
-          <div>
-            <ChatMessages />
-            <ChatForm />
           </div>
         </div>
       );

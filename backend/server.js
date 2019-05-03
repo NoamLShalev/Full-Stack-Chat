@@ -180,7 +180,6 @@ app.post("/kick-out", upload.none(), (req, res) => {
 app.get("/admin", (req, res) => {
   let sessionId = req.cookies.sid;
   let username = sessions[sessionId];
-  console.log("username", username);
   if (username === "Admin") {
     res.send(JSON.stringify({ success: true }));
     return;

@@ -98,13 +98,18 @@ class UnconnectedChatForm extends Component {
       return (
         <div>
           <form onSubmit={this.handleSubmit}>
-            <input
-              type="text"
-              onChange={this.handleMessageChange}
-              value={this.state.message}
-            />
-            <input type="file" onChange={this.handleFiles} />
-            <input type="submit" value="Send" />
+            <div className="user-inputs">
+              <textarea
+                type="text"
+                placeholder="Message"
+                onChange={this.handleMessageChange}
+              />
+              <div>
+                <p className="add-image">Add Image:</p>
+                <input type="file" onChange={this.handleFiles} />
+              </div>
+            </div>
+            <button type="submit">Send</button>
           </form>
           <button onClick={this.logout}>Logout</button>
           <button onClick={this.deleteMessages}>Delete My Messages</button>
@@ -115,13 +120,18 @@ class UnconnectedChatForm extends Component {
     return (
       <div>
         <form onSubmit={this.handleSubmit}>
-          <input
-            type="text"
-            onChange={this.handleMessageChange}
-            value={this.state.message}
-          />
-          <input type="file" onChange={this.handleFiles} />
-          <input type="submit" value="Send" />
+          <div className="user-inputs">
+            <textarea
+              type="text"
+              placeholder="Message"
+              onChange={this.handleMessageChange}
+            />
+            <div>
+              <p className="add-image">Add Image:</p>
+              <input type="file" onChange={this.handleFiles} />
+            </div>
+          </div>
+          <button type="submit">Send</button>
         </form>
         <button onClick={this.logout}>Logout</button>
         <button onClick={this.deleteMessages}>Delete My Messages</button>
