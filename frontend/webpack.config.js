@@ -1,25 +1,27 @@
-const HtmlWebPackPlugin = require("html-webpack-plugin")
-const path = require("path")
+const HtmlWebPackPlugin = require("html-webpack-plugin");
+const path = require("path");
 module.exports = {
   devtool: "source-map",
   output: {
-    publicPath: '/',
-    path: path.join(__dirname, "build"),
+    publicPath: "/",
+    path: path.join(__dirname, "build")
   },
   devServer: {
+    host: "0.0.0.0",
     port: 3000,
     overlay: {
       warnings: true,
       errors: true
     },
     historyApiFallback: {
-      index: '/index.html'
+      index: "/index.html"
     },
     contentBase: path.join(__dirname, "public"),
     hot: true
   },
   module: {
-    rules: [{
+    rules: [
+      {
         test: /\.(js|jsx)$/,
         exclude: /node_modules/,
         use: {
@@ -28,9 +30,11 @@ module.exports = {
       },
       {
         test: /\.html$/,
-        use: [{
-          loader: "html-loader"
-        }]
+        use: [
+          {
+            loader: "html-loader"
+          }
+        ]
       },
       {
         test: /\.css$/,
@@ -38,13 +42,15 @@ module.exports = {
       },
       {
         test: /\.(jpe?g|png|gif|svg)$/i,
-        use: [{
-          loader: "url-loader",
-          options: {
-            limit: 30000,
-            name: "[name].[ext]"
+        use: [
+          {
+            loader: "url-loader",
+            options: {
+              limit: 30000,
+              name: "[name].[ext]"
+            }
           }
-        }]
+        ]
       }
     ]
   },
@@ -59,4 +65,4 @@ module.exports = {
     javascript: "./src/index.jsx",
     html: "./public/index.html"
   }
-}
+};
