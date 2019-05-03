@@ -7,13 +7,15 @@ import ChatForm from "./ChatForm.jsx";
 
 class UnconnectedApp extends Component {
   componentDidMount = () => {
-    fetch("http://138.197.131.216:4000/login-check", {
+    fetch("http://localhost:4000/login-check", {
       credentials: "include"
     })
       .then(responseHeader => {
+        console.log("im here");
         return responseHeader.text();
       })
       .then(responseBody => {
+        console.log("now im here", responseBody);
         let parsed = JSON.parse(responseBody);
         if (parsed.success) {
           this.props.dispatch({ type: "login-success" });
