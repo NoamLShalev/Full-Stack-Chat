@@ -103,11 +103,7 @@ class UnconnectedChatForm extends Component {
               onChange={this.handleMessageChange}
               value={this.state.message}
             />
-            <input
-              type="file"
-              onChange={this.handleFiles}
-              value={this.state.file}
-            />
+            <input type="file" onChange={this.handleFiles} />
             <input type="submit" value="Send" />
           </form>
           <button onClick={this.logout}>Logout</button>
@@ -124,11 +120,7 @@ class UnconnectedChatForm extends Component {
             onChange={this.handleMessageChange}
             value={this.state.message}
           />
-          <input
-            type="file"
-            onChange={this.handleFiles}
-            value={this.state.file}
-          />
+          <input type="file" onChange={this.handleFiles} />
           <input type="submit" value="Send" />
         </form>
         <button onClick={this.logout}>Logout</button>
