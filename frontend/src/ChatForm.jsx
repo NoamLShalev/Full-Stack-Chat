@@ -11,7 +11,7 @@ class UnconnectedChatForm extends Component {
   }
 
   componentDidMount = () => {
-    fetch("http://localhost:4000/admin", {
+    fetch("http://138.197.131.216:4000/admin", {
       credentials: "include"
     })
       .then(responseHeader => {
@@ -38,7 +38,7 @@ class UnconnectedChatForm extends Component {
     let data = new FormData();
     data.append("message", this.state.message);
     data.append("image", this.state.file);
-    fetch("http://localhost:4000/newmessage", {
+    fetch("http://138.197.131.216:4000/newmessage", {
       method: "POST",
       body: data,
       credentials: "include"
@@ -47,7 +47,7 @@ class UnconnectedChatForm extends Component {
   };
 
   logout = () => {
-    fetch("http://localhost:4000/logout", {
+    fetch("http://138.197.131.216:4000/logout", {
       credentials: "include"
     })
       .then(responseHeader => {
@@ -62,7 +62,7 @@ class UnconnectedChatForm extends Component {
   };
 
   deleteMessages = () => {
-    fetch("http://localhost:4000/delete", {
+    fetch("http://138.197.131.216:4000/delete", {
       credentials: "include"
     });
   };
@@ -76,7 +76,7 @@ class UnconnectedChatForm extends Component {
     let user = window.prompt("Who do you want to kick out?");
     let data = new FormData();
     data.append("user", user);
-    fetch("http://localhost:4000/kick-out", {
+    fetch("http://138.197.131.216:4000/kick-out", {
       method: "POST",
       body: data,
       credentials: "include"

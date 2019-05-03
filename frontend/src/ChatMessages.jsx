@@ -4,7 +4,7 @@ import { connect } from "react-redux";
 class UnconnectedChatMessages extends Component {
   componentDidMount = () => {
     let updater = () => {
-      fetch("http://localhost:4000/messages", {
+      fetch("http://138.197.131.216:4000/messages", {
         credentials: "include"
       })
         .then(header => {

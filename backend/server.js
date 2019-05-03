@@ -94,7 +94,7 @@ app.post("/newmessage", upload.single("image"), (req, res) => {
     return;
   }
 
-  let frontEndPath = "http://localhost:4000/images/" + file.filename;
+  let frontEndPath = "http://138.197.131.216:4000/images/" + file.filename;
 
   newMessage = {
     username: username + ": ",
